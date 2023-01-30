@@ -1,1 +1,1 @@
-module.exports = 'https://url-shortener-backend-489g.onrender.com' 
+module.exports = 'https://url-shortener-application-backend.vercel.app' 

@@ -18,7 +18,7 @@ const PASSWORD = process.env.PASSWORD;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://url-shortener-application-frontend.vercel.app/",
+    origin: "https://url-shortener-application-frontend.vercel.app",
   })
 );
 
