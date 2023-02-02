@@ -38,20 +38,20 @@ Back-end Deployed URL's link is equal to https://url-shortener-application-backe
 
 # Get Methods
 
-/
-/enterurl
-/dashboard
-/:shortURL
+/<br/>
+/enterurl<br/>
+/dashboard<br/>
+/:shortURL<br/>
 
 <hr/>
 
 # Post Methods
 
-/
-/register
-/activate-account
-/resetpassword
-/reset-password-page
-/enterurl
+/<br/>
+/register<br/>
+/activate-account<br/>
+/resetpassword<br/>
+/reset-password-page<br/>
+/enterurl<br/>
 
 <hr/>
