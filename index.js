@@ -11,7 +11,7 @@ require("dotenv").config();
 const url = require("./config");
 const URL = process.env.LINK;
 const DB = process.env.DB;
-const jwt_secret = process.env.jwt_secret;
+const jwt_secret = process.env.JWT_SECRET;
 const FROM = process.env.FROM;
 const PASSWORD = process.env.PASSWORD;
 //MiddleWare
