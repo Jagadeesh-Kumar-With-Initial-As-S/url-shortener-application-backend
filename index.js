@@ -103,7 +103,7 @@ app.post("/register", async function (request, response) {
       let emailIDCheck = await db
         .collection("users")
         .findOne({ email: request.body.email });
-      if (!emailIDCheck) {
+      if (emailIDCheck) {
         await db.collection("users").insertOne(request.body);
         await connection.close();
         let mailid = request.body.email;
