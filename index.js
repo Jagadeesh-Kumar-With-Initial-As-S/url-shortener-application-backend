@@ -108,7 +108,7 @@ app.post("/register", async function (request, response) {
         const user = await db
       .collection("users")
       .findOne({ email: request.body.email });
-        
+        await connection.close();
         let mailid = request.body.email;
 
         var transporter = nodemailer.createTransport({
@@ -154,7 +154,6 @@ app.post("/register", async function (request, response) {
   } catch (error) {
     console.log(error);
   }
-  await connection.close();
 });
 
 //Activate Account
