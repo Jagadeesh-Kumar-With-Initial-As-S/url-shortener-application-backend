@@ -1,9 +1,3 @@
-# Frontend and Backend are connected .
-
-<hr/>
-
-# Backend is working at 100%
-
 <hr/>
 
 # Brief
