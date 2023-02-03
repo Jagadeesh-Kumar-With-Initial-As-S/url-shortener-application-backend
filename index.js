@@ -105,12 +105,12 @@ app.post("/register", async function (request, response) {
         .findOne({ email: request.body.email });
       if (!emailIDCheck) {
         await db.collection("users").insertOne(request.body);
-        const user = await db
+        var user = await db
       .collection("users")
       .findOne({ email: request.body.email });
-        await connection.close();
+        
         let mailid = request.body.email;
-
+        await connection.close();
         var transporter = nodemailer.createTransport({
           service: "gmail",
           auth: {
