@@ -105,7 +105,7 @@ app.post("/register", async function (request, response) {
         .findOne({ email: request.body.email });
       if (!emailIDCheck) {
         await db.collection("users").insertOne(request.body);
-        await db
+        db
       .collection("users")
       .findOne({ email: request.body.email });
         
