@@ -104,12 +104,14 @@ app.post("/register", async function (request, response) {
         .collection("users")
         .findOne({ email: request.body.email });
       if (!emailIDCheck) {
+           
         await db.collection("users").insertOne(request.body);
-        db
+        await db
       .collection("users")
       .findOne({ email: request.body.email });
-        let mailid = request.body.email;       
-
+        let link = "https://url-shortener-application-frontend.vercel.app/activate-account";
+        let mailid = request.body.email;    
+         
         await connection.close();
         var transporter = nodemailer.createTransport({
           service: "gmail",
@@ -118,7 +120,7 @@ app.post("/register", async function (request, response) {
             pass: PASSWORD,
           },
         });
-        let link = "https://url-shortener-application-frontend.vercel.app/activate-account";
+       
         var mailOptions = {
           from: FROM,
           to: mailid,
