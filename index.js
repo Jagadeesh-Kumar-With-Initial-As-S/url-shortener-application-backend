@@ -108,8 +108,8 @@ app.post("/register", async function (request, response) {
         db
       .collection("users")
       .findOne({ email: request.body.email });
-        
-        let mailid = request.body.email;
+        let mailid = request.body.email;       
+
         await connection.close();
         var transporter = nodemailer.createTransport({
           service: "gmail",
