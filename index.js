@@ -103,15 +103,10 @@ app.post("/register", async function (request, response) {
       let emailIDCheck = await db
         .collection("users")
         .findOne({ email: request.body.email });
-      if (!emailIDCheck) {
-           
+      if (!emailIDCheck) {   
         await db.collection("users").insertOne(request.body);
-        await db
-      .collection("users")
-      .findOne({ email: request.body.email });
         let link = "https://url-shortener-application-frontend.vercel.app/activate-account";
         let mailid = request.body.email;    
-         
         await connection.close();
         var transporter = nodemailer.createTransport({
           service: "gmail",
