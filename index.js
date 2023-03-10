@@ -99,7 +99,7 @@ app.post("/register", async function (request, response) {
       response.json({
         message: "Username already exists. Please choose other username",
       });
-    } else {
+    } else if(!checkUser){
       let emailIDCheck = await db
         .collection("users")
         .findOne({ email: request.body.email });
