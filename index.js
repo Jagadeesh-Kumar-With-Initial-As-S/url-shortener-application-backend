@@ -15,8 +15,9 @@ const jwt_secret = process.env.JWT_SECRET;
 const FROM = process.env.FROM;
 const PASSWORD = process.env.PASSWORD;
 //MiddleWare
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
+
 
 let authenticate = function (request, response, next) {
   if (request.headers.authorization) {
