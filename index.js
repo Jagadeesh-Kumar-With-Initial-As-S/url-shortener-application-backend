@@ -16,11 +16,7 @@ const FROM = process.env.FROM;
 const PASSWORD = process.env.PASSWORD;
 //MiddleWare
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://url-shortener-application-frontend.vercel.app",
-  })
-);
+app.use(cors());
 
 let authenticate = function (request, response, next) {
   if (request.headers.authorization) {
